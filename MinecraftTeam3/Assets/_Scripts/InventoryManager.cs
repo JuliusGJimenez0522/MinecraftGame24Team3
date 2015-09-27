@@ -4,6 +4,7 @@ using System.Collections;
 
 public class InventoryManager : MonoBehaviour 
 {
+	public int torchInventory = 0;
 	public int woodInventory = 0;
 	public int stoneInventory = 0;
 	public int dirtInventory = 0;
@@ -12,6 +13,9 @@ public class InventoryManager : MonoBehaviour
 	public int porkFood = 0;
 	public int chickenFood = 0;
 
+	public Text swordInvText;
+	public Text pickAxeInvText;
+	public Text torchInvText;
 	public Text woodInvText;
 	public Text stoneInvText;
 	public Text dirtInvText;
@@ -19,6 +23,7 @@ public class InventoryManager : MonoBehaviour
 
 	public Text porkInvText;
 	public Text chickenInvText;
+
 
 	// Use this for initialization
 	void Start () 
@@ -74,6 +79,9 @@ public class InventoryManager : MonoBehaviour
 	}
 	void SetCountText ()
 	{
+		swordInvText.text = "Sword";
+		pickAxeInvText.text = "PickAxe";
+		torchInvText.text = "Torch: " + torchInventory.ToString ();
 		woodInvText.text = "Wood: " + woodInventory.ToString ();
 		stoneInvText.text = "Stone: " + stoneInventory.ToString ();
 		dirtInvText.text = "Dirt: " + dirtInventory.ToString ();
@@ -82,6 +90,11 @@ public class InventoryManager : MonoBehaviour
 		porkInvText.text = "Bacon: " + porkFood.ToString ();
 		chickenInvText.text = "Chicken: " + chickenFood.ToString ();
 
+	}
+	public void SetTorch ()
+	{
+		torchInventory = torchInventory + 1;
+		SetCountText ();
 	}
 
 	public void SetDirt()

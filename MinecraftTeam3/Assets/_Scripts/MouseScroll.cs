@@ -4,11 +4,7 @@ using System.Collections;
 public class MouseScroll : MonoBehaviour 
 {
 
-	// Mouse scroll wheel quickbar slection, but without the quickbar part...
 
-	// slots contols the mouse wheel scrolling, if the mouse moves slots increases slightly before reverting to 0, and decreases if the mouse scrolls down
-	// this affects the position variable, 1 is added or taken away from it every time slots detects the mouse wheel moving.
-	// This is a poor implamentation cause its just a bunch of if statements, and on 0 nothing happens. However, it works and the 0 thing isnt even noticable because the mouse wheel moves so much.
 	public float slots = 0.0f;
 	public int position = 0;
 
@@ -21,8 +17,6 @@ public class MouseScroll : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		//Detects if the mouse is scrolling up or down.
-		// scroll up
 		slots = Input.GetAxis("Mouse ScrollWheel");
 		if (slots > 0f)
 		{
