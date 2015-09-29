@@ -91,14 +91,19 @@ public class PlayerController : MonoBehaviour
 	}
 	void OnCollisionStay(Collision other)
 	{
-		if (other.gameObject.tag == "Enemy")
-		{			
+		if (other.gameObject.tag == "Enemy") {			
 			other.gameObject.GetComponent<Rigidbody> ().AddExplosionForce (150.0f, other.gameObject.transform.position, 10.0f, 3.0F);
 			print ("Something"); 
 			health --;
 			print (health);
 		}
-	
+	}
+	void OnTriggerEnter (Collider other)
+	{
+		if (other.gameObject.CompareTag ("Pick Up")) 
+		{
+			other.gameObject.SetActive(false);
+		}
 
 	}
 }	
