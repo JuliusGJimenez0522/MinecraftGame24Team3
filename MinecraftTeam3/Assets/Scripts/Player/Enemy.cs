@@ -14,7 +14,7 @@ public class Enemy : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{		
-		if (hit == true) 
+		if (hit = true) 
 		{
 			timer += Time.deltaTime; 
 		}

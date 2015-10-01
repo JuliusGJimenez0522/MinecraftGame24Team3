@@ -2,7 +2,8 @@
 using UnityEngine.UI;
 using System.Collections;
 
-public class InventoryManager : MonoBehaviour 
+
+public class InventoryManager : MonoBehaviour
 {
 	public int torchInventory = 0;
 	public int woodInventory = 0;
