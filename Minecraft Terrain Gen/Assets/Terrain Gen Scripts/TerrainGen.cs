@@ -8,21 +8,22 @@ public class TerrainGen
 {
     //Controls the min and max heights or the blocks to control the noise function at the very bottom
     //add new values as needed
-    float stoneBaseHeight = -24;
-    float stoneBaseNoise = 0.05f;
-    float stoneBaseNoiseHeight = 4;
-
-    float stoneMountainHeight = 48;
-    float stoneMountainFrequency = 0.008f;
-    float stoneMinHeight = -12;
-
-    float dirtBaseHeight = 1;
-    float dirtNoise = 0.04f;
-    float dirtNoiseHeight = 3;
-
-    //tree variables
-    float treeFrequency = 0.2f;
-    int treeDensity = 3;
+	float stoneBaseHeight = -24;
+	float stoneBaseNoise = Random.Range (0.03f, 0.032f);
+	float stoneBaseNoiseHeight = 4;
+	
+	float stoneMountainHeight = 48;
+	float stoneMountainFrequency = Random.Range (0.002f, 0.0024f);
+	float stoneMinHeight = -12;
+	
+	float dirtBaseHeight = 1;
+	float dirtNoise = Random.Range (0.01f, 0.02f);
+	float dirtNoiseHeight = 3;
+	
+	//tree variables
+	float treeFrequency = 0.2f;
+	int treeDensity = 3;
+   
 
     // takes a chunk, fill it and return the filled chunk. It does this by cycling over every column in the chunk and handling them individually.
     public Chunk ChunkGen(Chunk chunk)
