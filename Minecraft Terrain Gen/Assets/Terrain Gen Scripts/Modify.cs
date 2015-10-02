@@ -15,8 +15,10 @@ public class Modify : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             RaycastHit hit;
-            if (Physics.Raycast(transform.position, transform.forward, out hit, 100))
+            if (Physics.Raycast(transform.position, transform.forward, out hit, 7))
             {
+				Debug.DrawRay(transform.position, transform.forward, Color.red);
+				print (hit.collider.);
                 EditTerrain.SetBlock(hit, new BlockAir());
             }
         }

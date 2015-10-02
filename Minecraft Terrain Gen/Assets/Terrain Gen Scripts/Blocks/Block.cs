@@ -18,6 +18,9 @@ public class Block
     // for uv coordinates for the mesh
     const float tileSize = 0.25f;
 
+	//for getting access to the inventory manager
+	public GameObject inventoryManager = null;
+
 
     //Base block constructor
     public Block()
