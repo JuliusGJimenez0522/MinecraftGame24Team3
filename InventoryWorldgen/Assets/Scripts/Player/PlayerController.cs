@@ -3,8 +3,8 @@ using System.Collections;
 
 public class PlayerController : MonoBehaviour 
 {
-    public SwordAnimation _swordAnimation;
-
+   
+	Inventory inventory;
 	int currentHealth;
     Rect crossHairRect;
     Texture crossHairTexture;
@@ -87,7 +87,7 @@ public class PlayerController : MonoBehaviour
 		}
 		if (Input.GetMouseButtonDown(0)) 
 		{
-            _swordAnimation.swordSwing();
+
 		}
 
 	}

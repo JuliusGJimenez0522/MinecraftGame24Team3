@@ -28,7 +28,7 @@ public class Pig : MonoBehaviour
 		if (other.gameObject) 
 		{
 			transform.Rotate(new Vector3(0,180,0));
-			Debug.Log (other.gameObject);
+//			Debug.Log (other.gameObject);
 			transform.position = new Vector3 (0.1f, transform.position.y, transform.position.z);
 		}
 

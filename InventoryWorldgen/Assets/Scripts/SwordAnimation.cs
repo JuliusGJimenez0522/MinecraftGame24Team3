@@ -3,7 +3,7 @@ using System.Collections;
 
 public class SwordAnimation : MonoBehaviour
 {
-
+	public Animation _swordAnimation = null;
 	// Use this for initialization
 	void Start ()
     {
@@ -19,6 +19,6 @@ public class SwordAnimation : MonoBehaviour
 
     public void swordSwing()
     {
-        GetComponent<Animation>().Play();
+        _swordAnimation.Play();
     }
 }

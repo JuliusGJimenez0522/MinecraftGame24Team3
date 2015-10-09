@@ -76,10 +76,10 @@ public class Inventory : MonoBehaviour
 			GUI.DrawTexture(new Rect(Event.current.mousePosition.x, Event.current.mousePosition.y, 50, 50), draggedItem.itemIcon);
 		}
 
-		//for (int i = 0; i < inventory.Count; i++)
-		//{
-		//	GUI.Label(new Rect (10,i * 20,200,50), inventory[i].itemName);
-		//}
+		for (int i = 0; i < inventory.Count; i++)
+		{
+			GUI.Label(new Rect (10,i * 20,200,50), inventory[i].itemName);
+		}
 	}
 	void DrawInventory()
 	{
@@ -205,6 +205,11 @@ public class Inventory : MonoBehaviour
 	public void OpenInventory()
 	{
 		showInventory = !showInventory;
+	}
+
+	public void InventoryList()
+	{
+		int count = inventory.Count;
 	}
 
 }

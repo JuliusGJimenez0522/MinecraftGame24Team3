@@ -29,6 +29,7 @@ public class Modify : MonoBehaviour
 
 				if (currentBlock.ToString() == "BlockGrass")
 				{
+					print("GRASS");
 					inventory.GetComponent<Inventory>().AddItem(3);
 					EditTerrain.SetBlock(hit, new BlockAir());
 				}
@@ -49,14 +50,17 @@ public class Modify : MonoBehaviour
 					EditTerrain.SetBlock(hit, new BlockAir());
 				}
 
-//				if(grass.isGrass == true)
-//				{
-//					edit.breakDirt = true;
-//		
-//				}
-
             }
         }
+		if (Input.GetMouseButtonDown(1))
+		{
+			RaycastHit hit;
+			if (Physics.Raycast(transform.position, transform.forward, out hit, 10))
+			{
+				Chunk chunk = hit.collider.GetComponent<Chunk>();
+//				chunk.world.SetBlock(hit.normal.x, hit.normal.y, hit.normal.z, BlockGrass);
+			}
+		}
 // demo camera controller, very little idea how it works :/ Like, where the hell does the wasd input come from???
    /*     rot = new Vector2(
             rot.x + Input.GetAxis("Mouse X") * 3,
